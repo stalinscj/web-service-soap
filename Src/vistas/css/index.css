@@ -1,0 +1,79 @@
+/* General Styles */
+html{
+   /*background:url(http://phutora.com/img/friends3.jpg) no-repeat;*/
+   background-size: cover;
+   height:100%;
+   background-color: #000;
+}
+* {
+   box-sizing:border-box;
+   -webkit-box-sizing:border-box;
+   -moz-box-sizing:border-box;
+   -webkit-font-smoothing:antialiased;
+   -moz-font-smoothing:antialiased;
+   -o-font-smoothing:antialiased;
+   font-smoothing:antialiased;
+   text-rendering:optimizeLegibility;
+}
+body {
+   color: #C0C0C0;
+   font-family: Arial, san-serif;
+}
+
+
+/* Contact Form Styles */
+h1 {
+   margin: 10px 0 0 0;
+}
+h4{
+   margin: 0 0 20px 0;
+}
+#lista_servicios {
+   background-color:rgba(72,72,72,0.7);
+   padding: 10px 20px 30px 20px;
+   max-width:100%;
+   float: left;
+   left: 50%;
+   position: absolute;
+   margin-top:30px;
+   margin-left: -260px;
+   border-radius:7px;
+   -webkit-border-radius:7px;
+   -moz-border-radius:7px;
+}
+   
+.boton {
+   cursor:pointer;
+   width:100%;
+   border:none;
+   background:#991D57;
+   background-image:linear-gradient(bottom, #1B4F72 0%, #21618C 52%);
+   background-image:-moz-linear-gradient(bottom, #1B4F72 0%, #21618C 52%);
+   background-image:-webkit-linear-gradient(bottom, #1B4F72 0%, #21618C 52%);
+   color:#FFF;
+   margin:10px 0 5px;
+   padding:10px;
+   border-radius:5px;
+}
+.boton:hover {
+   background-image:linear-gradient(bottom, #21618C 0%, #2E86C1 52%);
+   background-image:-moz-linear-gradient(bottom, #21618C 0%, #2E86C1 52%);
+   background-image:-webkit-linear-gradient(bottom, #21618C 0%, #2E86C1 52%);
+   -webkit-transition:background 0.3s ease-in-out;
+   -moz-transition:background 0.3s ease-in-out;
+   transition:background-color 0.3s ease-in-out;
+}
+.boton:active {
+   box-shadow:inset 0 1px 3px rgba(0,0,0,0.5);
+}
+
+@media only screen and (max-width: 580px) {
+   #lista_servicios{
+      left: 3%;
+      margin-right: 3%;
+      width: 88%;
+      margin-left: 0;
+      padding-left: 3%;
+      padding-right: 3%;
+   }
+}

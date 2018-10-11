@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Renovar copias</title>
+	<link rel="stylesheet" href="css/consumir_copias.css">
+</head>
+<body>
+	<div id="consumir_copias-formulario">
+		<div>
+			<h1>Consumir copias </h1> 
+			<h4>Servicio de fotocopiado uneg.</h4> 
+		</div>
+
+		<form method="post" action="#">
+			<div>
+		      <label for="txt_cedulas">
+		      	<span class="required">Cédula: *</span>
+		      	<input type="text" id="txt_cedula" name="txt_cedula" value="" placeholder="Cédula del estudiante" required="required" tabindex="1"/>
+		      </label>  
+			</div>		
+			<div>
+		      <label for="txt_clave">
+		      	<span class="required">Clave: *</span>
+		      	<input type="text" id="txt_clave" name="txt_clave" value="" placeholder="Clave del estudiante" required="required" tabindex="2"/>
+		      </label>  
+			</div>
+			<div>
+		      <label for="txt_copias">
+		      	<span class="required">Copias: *</span>
+		      	<input type="text" id="txt_copias" name="txt_copias" value="" placeholder="Cantidad de copias a consumir" required="required" tabindex="3"/>
+		      </label>  
+			</div>
+		</form>
+		<div>		           
+	      <button name="btn_consumir" id="btn_consumir" >CONSUMIR</button> 
+		</div>
+		<div>		           
+	      <button name="btn_limpiar" id="btn_limpiar" >LIMPIAR CAMPOS</button> 
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+	<script type="text/javascript" src="js/consumir_copias.js"></script>
+</body>
+</html>

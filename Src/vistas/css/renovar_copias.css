@@ -1,0 +1,120 @@
+html{
+   background-size: cover;
+   height:100%;
+   background-color: #000;
+}
+
+* {
+   box-sizing:border-box;
+   -webkit-box-sizing:border-box;
+   -moz-box-sizing:border-box;
+   -webkit-font-smoothing:antialiased;
+   -moz-font-smoothing:antialiased;
+   -o-font-smoothing:antialiased;
+   font-smoothing:antialiased;
+   text-rendering:optimizeLegibility;
+}
+
+body {
+   color: #C0C0C0;
+   font-family: Arial, san-serif;
+}
+
+h1 {
+   margin: 10px 0 0 0;
+}
+
+h4{
+   margin: 0 0 20px 0;
+}
+
+#renovar_copias-formulario {
+   background-color:rgba(72,72,72,0.7);
+   padding: 10px 20px 30px 20px;
+   max-width:100%;
+   float: left;
+   left: 50%;
+   position: absolute;
+   margin-top:30px;
+   margin-left: -260px;
+   border-radius:7px;
+   -webkit-border-radius:7px;
+   -moz-border-radius:7px;
+}
+
+#renovar_copias-formulario input,   
+#renovar_copias-formulario select,   
+#renovar_copias-formulario textarea,   
+#renovar_copias-formulario label { 
+   font-size: 15px;  
+   margin-bottom: 2px;
+   font-family: Arial, san-serif;
+}
+
+#renovar_copias-formulario input,   
+#renovar_copias-formulario select,   
+#renovar_copias-formulario textarea { 
+   width:100%;
+   background: #fff;
+   border: 0; 
+   -moz-border-radius: 4px;  
+   -webkit-border-radius: 4px;  
+   border-radius: 4px;
+   margin-bottom: 25px;  
+   padding: 5px;  
+}
+
+#renovar_copias-formulario input:focus,   
+#renovar_copias-formulario select:focus,   
+#renovar_copias-formulario textarea:focus {  
+   background-color: #E5E6E7; 
+}
+
+#renovar_copias-formulario textarea {
+   width:100%;
+   height: 150px;
+}
+
+#btn_renovar, #btn_limpiar {
+   cursor:pointer;
+   width:100%;
+   border:none;
+   background:#991D57;
+   background-image:linear-gradient(bottom, #1B4F72 0%, #21618C 52%);
+   background-image:-moz-linear-gradient(bottom, #1B4F72 0%, #21618C 52%);
+   background-image:-webkit-linear-gradient(bottom, #1B4F72 0%, #21618C 52%);
+   color:#FFF;
+   margin:5px 0 5px;
+   padding:10px;
+   border-radius:renovar_copias:hover, #btn_limpiar:hover {
+   background-image:linear-gradient(bottom, #21618C 0%, #2E86C1 52%);
+   background-image:-moz-linear-gradient(bottom, #21618C 0%, #2E86C1 52%);
+   background-image:-webkit-linear-gradient(bottom, #21618C 0%, #2E86C1 52%);
+   -webkit-transition:background 0.3s ease-in-out;
+   -moz-transition:background 0.3s ease-in-out;
+   transition:background-color 0.3s ease-in-renovar_copias:active, #btn_limpiar:active {
+   box-shadow:inset 0 1px 3px rgba(0,0,0,0.5);
+}
+
+input:required, textarea:required {  
+   box-shadow: none;
+   -moz-box-shadow: none;  
+   -webkit-box-shadow: none;  
+   -o-box-shadow: none;  
+}
+
+#renovar_copias-formulario .required {  
+   font-weight:bold;  
+   color: #E5E6E7;      
+}
+
+@media only screen and (max-width: 580px) {
+   #renovar_copias-formulario{
+      left: 3%;
+      margin-right: 3%;
+      width: 88%;
+      margin-left: 0;
+      padding-left: 3%;
+      padding-right: 3%;
+   }
+}

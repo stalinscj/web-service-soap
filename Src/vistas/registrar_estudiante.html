@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Registrar Estudiante</title>
+	<link rel="stylesheet" href="css/registrar_estudiante.css">
+</head>
+<body>
+	<div id="registrar_estudiante-formulario">
+		<div>
+			<h1>Registrar Estudiante</h1> 
+			<h4>Ingrese los datos del estudiante que desea registrar.</h4> 
+		</div>
+
+		<form method="post" action="#">
+			<div>
+		      <label for="txt_nombre">
+		      	<span class="required">Nombre: *</span>
+		      	<input type="text" id="txt_nombre" name="txt_nombre" value="" placeholder="Nombre del estudiante que desea registrar" required="required" tabindex="1"/>
+		      </label>  
+			</div>
+			<div>
+		      <label for="txt_apellido">
+		      	<span class="required">Apellido: *</span>
+		      	<input type="text" id="txt_apellido" name="txt_apellido" value="" placeholder="Apellido del estudiante que desea registrar" required="required" tabindex="2"/>
+		      </label>  
+			</div>
+			<div>
+		      <label for="txt_cedula">
+		      	<span class="required">Cédula: *</span> 
+		      	<input type="text" id="txt_cedula" name="txt_cedula" value="" placeholder="Cédula del estudiante que desea registrar" required="required" tabindex="3"/>
+		      </label> 
+			</div>
+			<div>
+		      <label for="txt_sede">
+		      	<span class="required">Sede: *</span>
+		      	<input type="text" id="txt_sede" name="txt_sede" value="" placeholder="Sede del estudiante que desea registrar" required="required" tabindex="4"/>
+		      </label>  
+			</div>
+		</form>
+		<div>		           
+	      <button name="btn_buscar" id="btn_registrar" >REGISTRAR</button> 
+		</div>
+		<div>		           
+	      <button name="btn_limpiar" id="btn_limpiar" >LIMPIAR CAMPOS</button> 
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+	<script type="text/javascript" src="js/registrar_estudiante.js"></script>
+</body>
+</html>

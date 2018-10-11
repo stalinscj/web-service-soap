@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Actualizar Estudiante</title>
+	<link rel="stylesheet" href="css/actualizar_estudiante.css">
+</head>
+<body>
+	<div id="actualizar_estudiante-formulario">
+		<div>
+			<h1>Actualizar Estudiante</h1> 
+			<h4>Ingrese los datos del estudiante que desea actualizar.</h4> 
+		</div>
+
+		<form method="post" action="#">
+			<div>
+		      <label for="txt_nombre">
+		      	<span class="required">Nombre: *</span>
+		      	<input type="text" id="txt_nombre" name="txt_nombre" value="" placeholder="Nuevo nombre del estudiante que desea actualizar" required="required" tabindex="1"/>
+		      </label>  
+			</div>
+			<div>
+		      <label for="txt_apellido">
+		      	<span class="required">Apellido: *</span>
+		      	<input type="text" id="txt_apellido" name="txt_apellido" value="" placeholder="Nuevo apellido del estudiante que desea actualizar" required="required" tabindex="2"/>
+		      </label>  
+			</div>
+			<div>
+		      <label for="txt_cedula">
+		      	<span class="required">Cédula: *</span> 
+		      	<input type="text" id="txt_cedula" name="txt_cedula" value="" placeholder="Cédula actual del estudiante que desea actualizar" required="required" tabindex="3"/>
+		      </label> 
+			</div>
+			<div>
+		      <label for="txt_sede">
+		      	<span class="required">Sede: *</span>
+		      	<input type="text" id="txt_sede" name="txt_sede" value="" placeholder="Nueva sede del estudiante que desea actualizar" required="required" tabindex="4"/>
+		      </label>  
+			</div>
+			<div>
+		      <label for="txt_clave">
+		      	<span class="required">Clave : *</span>
+		      	<input type="text" id="txt_clave" name="txt_clave" value="" placeholder="Clave actual del estudiante que desea actualizar" required="required" tabindex="5"/>
+		      </label>  
+			</div>
+		</form>
+		<div>		           
+	      <button name="btn_actualizar" id="btn_actualizar" >ACTUALIZAR</button> 
+		</div>
+		<div>		           
+	      <button name="btn_limpiar" id="btn_limpiar" >LIMPIAR CAMPOS</button> 
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+	<script type="text/javascript" src="js/actualizar_estudiante.js"></script>
+</body>
+</html>

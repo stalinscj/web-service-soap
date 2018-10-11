@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Renovar copias</title>
+	<link rel="stylesheet" href="css/renovar_copias.css">
+</head>
+<body>
+	<div id="renovar_copias-formulario">
+		<div>
+			<h1>Renovar copias </h1> 
+			<h4>Renovar copias de todos los estudiantes.</h4> 
+		</div>
+
+		<form method="post" action="#">
+			<div>
+		      <label for="txt_nombre">
+		      	<span class="required">Usuario de administrador: *</span>
+		      	<input type="text" id="txt_nombre" name="txt_nombre" value="" placeholder="Usuario del administrador" required="required" tabindex="1"/>
+		      </label>  
+			</div>
+			
+			<div>
+		      <label for="txt_clave">
+		      	<span class="required">Clave administrador: *</span>
+		      	<input type="text" id="txt_clave" name="txt_clave" value="" placeholder="Clave del administrador" required="required" tabindex="2"/>
+		      </label>  
+			</div>
+		</form>
+		<div>		           
+	      <button name="btn_renovar" id="btn_renovar" >RENOVAR</button> 
+		</div>
+		<div>		           
+	      <button name="btn_limpiar" id="btn_limpiar" >LIMPIAR CAMPOS</button> 
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+	<script type="text/javascript" src="js/renovar_copias.js"></script>
+</body>
+</html>

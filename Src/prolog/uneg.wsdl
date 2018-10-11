@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+  xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" 
+  xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" 
+  xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" 
+  xmlns:tns="http://192.168.0.110" 
+  xmlns:s="http://www.w3.org/2001/XMLSchema" 
+  xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" 
+  xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" 
+  targetNamespace="http://192.168.0.110" 
+  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://192.168.0.110">
+      
+      <s:element name="buscarEstudiante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cedula" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+
+      <s:element name="buscarEstudianteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="buscarEstudianteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+
+      <s:element name="insertarEstudiante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cedula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apellido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="copias" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sede" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+
+      <s:element name="insertarEstudianteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertarEstudianteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+
+      <s:element name="actualizarEstudiante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cedula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apellido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="copias" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sede" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+
+      <s:element name="actualizarEstudianteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="actualizarEstudianteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+
+      <s:element name="renovarCopias">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clave" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+
+      <s:element name="renovarCopiasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="renovarCopiasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+
+      <s:element name="consumirCopias">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cedula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="copias" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+
+      <s:element name="consumirCopiasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consumirCopiasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      
+      <!-- <s:element name="string" nillable="true" type="s:string" /> -->
+
+    </s:schema>
+  </wsdl:types>
+
+
+  <wsdl:message name="buscarEstudianteSoapIn">
+    <wsdl:part name="parameters" element="tns:buscarEstudiante" />
+  </wsdl:message>
+
+  <wsdl:message name="buscarEstudianteSoapOut">
+    <wsdl:part name="parameters" element="tns:buscarEstudianteResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="insertarEstudianteSoapIn">
+    <wsdl:part name="parameters" element="tns:insertarEstudiante" />
+  </wsdl:message>
+
+  <wsdl:message name="insertarEstudianteSoapOut">
+    <wsdl:part name="parameters" element="tns:insertarEstudianteResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="actualizarEstudianteSoapIn">
+    <wsdl:part name="parameters" element="tns:actualizarEstudiante" />
+  </wsdl:message>
+
+  <wsdl:message name="actualizarEstudianteSoapOut">
+    <wsdl:part name="parameters" element="tns:actualizarEstudianteResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="renovarCopiasSoapIn">
+    <wsdl:part name="parameters" element="tns:renovarCopias" />
+  </wsdl:message>
+
+  <wsdl:message name="renovarCopiasSoapOut">
+    <wsdl:part name="parameters" element="tns:renovarCopiasResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="consumirCopiasSoapIn">
+    <wsdl:part name="parameters" element="tns:consumirCopias" />
+  </wsdl:message>
+
+  <wsdl:message name="consumirCopiasSoapOut">
+    <wsdl:part name="parameters" element="tns:consumirCopiasResponse" />
+  </wsdl:message>
+  
+
+  <wsdl:portType name="unegSoap">
+   
+    <wsdl:operation name="buscarEstudiante">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Buscar estudiante</wsdl:documentation>
+      <wsdl:input message="tns:buscarEstudianteSoapIn" />
+      <wsdl:output message="tns:buscarEstudianteSoapOut" />
+    </wsdl:operation>
+
+    <wsdl:operation name="insertarEstudiante">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">insertar estudiante</wsdl:documentation>
+      <wsdl:input message="tns:insertarEstudianteSoapIn" />
+      <wsdl:output message="tns:insertarEstudianteSoapOut" />
+    </wsdl:operation>
+
+    <wsdl:operation name="actualizarEstudiante">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">actualizar estudiante</wsdl:documentation>
+      <wsdl:input message="tns:actualizarEstudianteSoapIn" />
+      <wsdl:output message="tns:actualizarEstudianteSoapOut" />
+    </wsdl:operation>
+
+    <wsdl:operation name="renovarCopias">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Renovar Copias</wsdl:documentation>
+      <wsdl:input message="tns:renovarCopiasSoapIn" />
+      <wsdl:output message="tns:renovarCopiasSoapOut" />
+    </wsdl:operation>
+
+    <wsdl:operation name="consumirCopias">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">consumir Copias</wsdl:documentation>
+      <wsdl:input message="tns:consumirCopiasSoapIn" />
+      <wsdl:output message="tns:consumirCopiasSoapOut" />
+    </wsdl:operation>
+
+  </wsdl:portType>
+
+
+  <wsdl:binding name="unegSoap" type="tns:unegSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    
+    <wsdl:operation name="buscarEstudiante">
+      <soap:operation soapAction="http://192.168.0.110/buscarEstudiante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+
+    <wsdl:operation name="insertarEstudiante">
+      <soap:operation soapAction="http://192.168.0.110/insertarEstudiante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+
+    <wsdl:operation name="actualizarEstudiante">
+      <soap:operation soapAction="http://192.168.0.110/actualizarEstudiante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+
+    <wsdl:operation name="renovarCopias">
+      <soap:operation soapAction="http://192.168.0.110/renovarCopias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+
+    <wsdl:operation name="consumirCopias">
+      <soap:operation soapAction="http://192.168.0.110/consumirCopias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    
+  </wsdl:binding>
+
+  <wsdl:service name="uneg">
+    
+    <wsdl:port name="unegSoap" binding="tns:unegSoap">
+      <soap:address location="http://192.168.0.110/controladores/uneg_servicios.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
